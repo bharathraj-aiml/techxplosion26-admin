@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-body: #06080d;
+    --bg-card: #0d1017;
+    --bg-card-subtle: #131720;
+    --text-main: #e8e6e1;
+    --text-muted: #7a7670;
+    --border-color: #1e2230;
+    --brand-primary: #c9a84c;
+    --brand-primary-hover: #dbb95d;
+    --brand-primary-glow: rgba(201, 168, 76, 0.25);
+    --accent-crimson: #d4364b;
+    --accent-crimson-glow: rgba(212, 54, 75, 0.2);
+    --accent-emerald: #2dd4a8;
+    --accent-emerald-bg: rgba(45, 212, 168, 0.1);
+    --glass-bg: rgba(13, 16, 23, 0.92);
+    --glass-border: rgba(30, 34, 48, 0.85);
+    --badge-bg: rgba(201, 168, 76, 0.1);
+    --badge-text: #d4b85c;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  body {
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  h1, h2, h3, .font-heading {
+    font-family: 'Outfit', 'JetBrains Mono', sans-serif;
+  }
+
+  code, pre, .font-mono, .jb-mono {
+    font-family: 'JetBrains Mono', monospace !important;
+  }
+}
+
+.jb-mono { font-family: 'JetBrains Mono', monospace; }
+
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+}
+
+.text-gradient-gold {
+  background: linear-gradient(135deg, #f0d878 0%, #c9a84c 40%, #a07c1e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glow-gold { box-shadow: 0 0 30px var(--brand-primary-glow); }
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-body); }
+::-webkit-scrollbar-thumb { background: var(--border-color); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--brand-primary); }
